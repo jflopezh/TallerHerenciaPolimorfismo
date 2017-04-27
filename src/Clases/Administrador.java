@@ -1,14 +1,17 @@
-package taller;
+package Clases;
+
+import Excepciones.ExcepcionNombre;
+import Excepciones.ExcepcionSalario;
 
 public class Administrador extends Empleado {
 
-    public Administrador(String Nombre, int ID) {
-        super(Nombre, ID);
+    public Administrador(String Nombre, int ID) throws ExcepcionNombre, ExcepcionSalario {
+        super(Nombre, 100, ID);
     }
     
     @Override
     public double calcularSalario() {
-        return 100;
+        return this.Salario;
     }
 
     @Override

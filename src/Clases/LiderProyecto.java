@@ -1,14 +1,21 @@
-package taller;
+package Clases;
 
+import Excepciones.ExcepcionLenguaje;
+import Excepciones.ExcepcionNombre;
+import Excepciones.ExcepcionSalario;
 import java.util.ArrayList;
 
 public class LiderProyecto extends Programador {
 
     private ArrayList<Programador> MiembrosEquipo;
 
-    public LiderProyecto(String LenguajeExperto, String Nombre, int ID) {
-        super(LenguajeExperto, Nombre, ID);
+    public LiderProyecto(String LenguajeExperto, String Nombre, double Salario, int ID) throws ExcepcionNombre, ExcepcionSalario, ExcepcionLenguaje {
+        super(LenguajeExperto, Nombre, Salario, ID);
         this.MiembrosEquipo = new ArrayList<>();
+    }
+
+    public ArrayList<Programador> getMiembrosEquipo() {
+        return MiembrosEquipo;
     }
 
     public void AgregarProgramador(Programador p) {

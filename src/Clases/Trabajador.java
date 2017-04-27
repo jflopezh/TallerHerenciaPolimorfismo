@@ -1,4 +1,4 @@
-package taller;
+package Clases;
 
 public abstract class Trabajador {
 
@@ -6,6 +6,10 @@ public abstract class Trabajador {
 
     public Trabajador(int ID) {
         this.ID = ID;
+    }
+
+    public int getID() {
+        return ID;
     }
 
     public abstract double calcularSalario();

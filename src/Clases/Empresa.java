@@ -1,4 +1,4 @@
-package taller;
+package Clases;
 
 import java.util.ArrayList;
 
@@ -8,6 +8,10 @@ public class Empresa {
 
     public Empresa() {
         this.Trabajadores = new ArrayList<>();
+    }
+
+    public ArrayList<Trabajador> getTrabajadores() {
+        return Trabajadores;
     }
     
     public void agregarTrabajador(Trabajador t) {
@@ -25,7 +29,7 @@ public class Empresa {
     public String listarInformacion()  {
         String Informacion = "";
         for (Trabajador t : Trabajadores) {
-            Informacion += " " + t.listarInformacion();
+            Informacion += t.listarInformacion() + "\n";
         }
         return Informacion;
     }

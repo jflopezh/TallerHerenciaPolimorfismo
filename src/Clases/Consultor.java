@@ -1,4 +1,4 @@
-package taller;
+package Clases;
 
 public class Consultor extends Trabajador {
 
@@ -7,6 +7,10 @@ public class Consultor extends Trabajador {
     public Consultor(String Labor, int ID) {
         super(ID);
         this.Labor = Labor;
+    }
+
+    public String getLabor() {
+        return Labor;
     }
 
     @Override
